@@ -1,0 +1,99 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: 0;
+  outline: 0;
+  font-family: sans-serif;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background: bisque;
+  transform: scale(1.2);
+}
+
+.dot {
+  width: 20px;
+  height: 20px;
+  background: black;
+  position: relative;
+  top: calc(50% - 10px);
+  left: calc(50% - 10px);
+  z-index: 999;
+  border-radius: 20px;
+}
+
+.clock {
+  height: 200px;
+  width: 200px;
+  box-shadow: 0 0 0 10px black;
+  border-radius: 200px;
+  position: relative;
+  background: whitesmoke;
+  /* overflow: hidden; */
+}
+
+.hand-sec {
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: rotating 60s linear infinite;
+}
+.hand-min {
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: rotating 360s linear infinite;
+}
+.hand-hr {
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: rotating 3600s linear infinite;
+}
+
+.sec {
+  height: 4px;
+  width: 110px;
+  position: absolute;
+  top: calc(50% - 2px);
+  left: 40%;
+  background: coral;
+  border-radius: 10px;
+}
+.min {
+  height: 10px;
+  width: 100px;
+  position: absolute;
+  top: calc(50% - 5px);
+  left: 40%;
+  background: rgb(80, 121, 255);
+  border-radius: 10px;
+}
+.hr {
+  height: 10px;
+  width: 86px;
+  position: absolute;
+  top: calc(50% - 5px);
+  left: 40%;
+  background: rgb(154, 199, 6);
+  border-radius: 10px;
+}
+
+/* animation: rotating 60s linear infinite; */
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
