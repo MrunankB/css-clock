@@ -41,7 +41,7 @@
     .hand {
       width: 50%;
       height: 6px;
-      background: black;
+      background: green;
       position: absolute;
       top: 50%;
       transform-origin: 100% 50%;
